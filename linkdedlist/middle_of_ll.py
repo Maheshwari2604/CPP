@@ -11,33 +11,23 @@ class linkedlist:
         new_node = node(new_node)
         new_node.next = self.head
         self.head = new_node
+def binaryfunc(arr, l, r, x):
+    while l<=r:
+        
+        #finding the mid values
+        mid = int(l+(r-l) / 2)
 
-    def middle_element(self):
-        temp = self.head
-        count = 0
-        while(temp):
-            count += 1
-            #print(temp.data)
-            temp = temp.next
+        #print(mid)
+        #print(type(mid))
+        
+        #checking condition if mid value is equal to search value or not
+        if(arr[mid] == x):
+            return mid
 
-            
-        middle = count/2 + 1
-        print(count)
-        print(middle)
-        print(type(middle))
+        #if not and value is greater than mid value ignore left part and increase its value 
+        elif arr[mid] < x:
+            l = mid+1
 
-        count = 1
-        temp = self.head
-        print('here the value is')
-        print(count)
-        print(middle)
-        print('above initial values')
-        while(temp):
-            if (count == middle):
-                print(temp.data)
-                break
-            else:
-                temp = temp.next
                 count += 1
                 #print(temp.data)
                 print('error')
